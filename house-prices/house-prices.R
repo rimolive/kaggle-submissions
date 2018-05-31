@@ -1,11 +1,11 @@
 library(tidyverse)
+library(caret)
 
 setwd("house-prices")
 
 houses.train <- read.csv("train.csv")
 houses.test <- read.csv("test.csv")
 
-par(mfrow=c(1,2))
 ggplot(houses.train, aes(MSSubClass, SalePrice)) +
   geom_point()
 ggplot(houses.train, aes(MSZoning, SalePrice)) +
